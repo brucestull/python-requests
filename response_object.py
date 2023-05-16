@@ -2,13 +2,15 @@ import requests
 import pprint
 
 
-def main():
-    response = requests.get('https://api.ipify.org')
-    pprint.pprint(response.url)
-    pprint.pprint(response.text)
-    pprint.pprint(response.status_code)
-    pprint.pprint(response.encoding)
-    pprint.pprint(response.headers)
+url = 'https://api.ipify.org'
 
-if __name__ == "__main__":
-    main()
+
+response = requests.get(url)
+print("response.url: ", response.url)
+print("response.status_code: ", response.status_code)
+print("response.encoding: ", response.encoding)
+print(response.text)
+print("response.headers: ")
+pprint.pprint(response.headers)
+print("dir(response.headers): ")
+pprint.pprint(dir(response.headers))

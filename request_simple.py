@@ -1,9 +1,8 @@
 import requests
 
 
-def main():
-    response = requests.get('https://api.ipify.org')
-    print("response.text: ", response.text)
+url = 'https://api.ipify.org'
 
-if __name__ == "__main__":
-    main()
+
+response = requests.get(url)
+print("response.text: ", response.text)
